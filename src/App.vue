@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <app-new-quote></app-new-quote>
+    <!-- <app-new-quote @quoteAdded="newQuote($event)"></app-new-quote> -->
+    <!-- OR implicitly -->
+    <app-new-quote @quoteAdded="newQuote"></app-new-quote>
     <app-quote-grid :quotes="quotes"></app-quote-grid>
   </div>
 </template>
@@ -13,6 +15,11 @@ export default {
       quotes: ["Just a Quote to see something", "Just another quote"],
       maxQuotes: 10
     };
+  },
+  methods: {
+    newQuote(quote) {
+      this.quotes.push(quote);
+    }
   },
   components: {
     appNewQuote: NewQuote,
