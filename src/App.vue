@@ -25,6 +25,9 @@ export default {
   },
   methods: {
     newQuote(quote) {
+      if (this.quotes.length >= this.maxQuotes) {
+        return alert("Max quotes reached! Delete quote to add more...");
+      }
       this.quotes.push(quote);
     },
     removeQuote(index) {
