@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <app-quote-progress :quoteCount="quotes.length" :quoteMax="maxQuotes"></app-quote-progress>
     <!-- <app-new-quote @quoteAdded="newQuote($event)"></app-new-quote> -->
     <!-- OR implicitly -->
     <app-new-quote @quoteAdded="newQuote"></app-new-quote>
@@ -12,6 +13,7 @@
   </div>
 </template>
 <script>
+import QuoteProgress from "./components/QuoteProgress.vue";
 import NewQuote from "./components/NewQuote.vue";
 import QuoteGrid from "./components/QuoteGrid.vue";
 export default {
@@ -30,6 +32,7 @@ export default {
     }
   },
   components: {
+    appQuoteProgress: QuoteProgress,
     appNewQuote: NewQuote,
     appQuoteGrid: QuoteGrid
   }
