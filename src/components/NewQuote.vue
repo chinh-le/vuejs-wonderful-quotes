@@ -7,7 +7,7 @@
       </div>
       <div class="col-sm-8 col-sm-offset-2 col-xs-12 col-md-6 col-md-offset-3 form-group">
         <!-- click.prevent: to not sending the form automatically as default form behavior -->
-        <button @click.prevent="createNew" class="btn btn-primary">Add Quote</button>
+        <button @click.prevent="createNew" class="btn btn-primary" :disabled="!quote">Add Quote</button>
       </div>
     </form>
   </div>
