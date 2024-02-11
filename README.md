@@ -1,6 +1,7 @@
 # vuejs-wonderful-quotes
 
-> A Vue.js project
+## TODO
+- Reconfigure Webpack since dist/build.js does not work on Vercel.
 
 ## Build Setup
 
